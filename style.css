@@ -1,3 +1,25 @@
+@keyframes slideFadeIn {
+  from {
+    transform: translateY(50px); /* mulai dari bawah */
+    opacity: 0; /* transparan */
+  }
+  to {
+    transform: translateY(0); /* posisi normal */
+    opacity: 1; /* terlihat */
+  }
+}
+
+@keyframes slideFadeOut {
+  from {
+    transform: translateX(50px); /* mulai dari bawah */
+    opacity: 0; /* transparan */
+  }
+  to {
+    transform: translateX(0); /* posisi normal */
+    opacity: 1; /* terlihat */
+  }
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #08100c;
@@ -11,6 +33,8 @@ body {
   width: 400px;
   padding: 15px;
   box-shadow: 0 0 10px rgb(255, 255, 255);
+  border-radius: 5px;
+  animation: slideFadeIn 1s ease-out forwards;
 }
 
 .judulAtas {
@@ -28,6 +52,7 @@ body {
   border-top: 3px solid white;
   border-bottom: 3px solid white;
   color: white;
+  animation: slideFadeOut 1s ease-out forwards;
 }
 
 .container {
@@ -38,14 +63,19 @@ body {
 
 .foto1 img {
   width: 150px;
-  height: 300px;
+  height: 310px;
   display: block;
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+  border-radius: 5px;
 }
 
 .subFoto img {
   width: 240px;
   height: 150px;
   display: block;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+  border-radius: 5px;
 }
 
 .deskripsi p {
